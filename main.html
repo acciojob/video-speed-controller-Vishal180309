@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Video Speed Scrubber</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Video Player</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-  <div class="wrapper">
-    <video class="flex" width="765" height="430" src="http://clips.vorwaerts-gmbh.de/VfE_html5.mp4" controls></video>
-    <div class="speed">
-      <div class="speed-bar">1×</div>
+    <div class="player">
+        <video class="player__video" src="https://www.w3schools.com/html/mov_bbb.mp4"></video>
+        <div class="player__controls">
+            <div class="progress">
+                <div class="progress__filled"></div>
+            </div>
+            <button class="player__button" title="Toggle Play"></button>
+            <input type="range" class="player__slider" id="progress" value="0">
+            <input type="range" class="player__slider" id="volume" min="0" max="1" step="0.05" value="1">
+            <input type="range" class="player__slider" id="playbackSpeed" min="0.5" max="2" step="0.1" value="1">
+            <button class="player__button" id="rewind" title="Rewind 10 seconds">&#x23EA; 10s</button>
+            <button class="player__button" id="fastForward" title="Skip forward 25 seconds">25s &#x23E9;</button>
+        </div>
     </div>
-  </div>
-
-<script  src="./script.js">
-  //Your code goes here
-</script>
+    <script src="script.js"></script>
 </body>
 </html>
